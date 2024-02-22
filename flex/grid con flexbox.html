@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Grid Artesanal</title>
+    <style>
+        *, *::after, *::before{
+            box-sizing: border-box;
+        }
+
+        .container {
+            margin: auto;
+            max-width: 1280px;
+            background-color: aqua;
+        }
+
+        .container__flex{
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .container__item{
+            border:thin solid #ccc;
+            flex: 0 0 100%;
+        }
+
+        @media screen and (min-width: 576px) {
+            .container__item{
+                flex: 0 0 50%;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            .container__item{
+                flex: 0 0 33.333333333333%;
+            }
+        }
+        @media screen and (min-width: 992px) {
+            .container__item{
+                flex: 0 0 25%;
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            .container__item{
+                flex: 0 0 16.66666666667%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="container__flex">
+            <article class="container__item">Item 1</article>
+            <article class="container__item">Item 2</article>
+            <article class="container__item">Item 3</article>
+            <article class="container__item">Item 4</article>
+            <article class="container__item">Item 5</article>
+            <article class="container__item">Item 6</article>
+            <article class="container__item">Item 7</article>
+            <article class="container__item">Item 8</article>
+            <article class="container__item">Item 9</article>
+            <article class="container__item">Item 10</article>
+            <article class="container__item">Item 11</article>
+            <article class="container__item">Item 12</article>
+            <article class="container__item">Item 13</article>
+            <article class="container__item">Item 14</article>
+            <article class="container__item">Item 15</article>
+            <article class="container__item">Item 16</article>
+            <article class="container__item">Item 17</article>
+            <article class="container__item">Item 18</article>
+            <article class="container__item">Item 19</article>
+            <article class="container__item">Item 20</article>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="motion.css">
+    <title>Movimiento en css</title>
+</head>
+
+<body>
+    <h1>Movimiento en CSS</h1>
+    <hr>
+    <section class="transitions">
+        <h2>Transiciones</h2>
+        <div class="box"></div>
+        <article class="card">
+            <img src="assets/puesta-sol.jpg" alt="puesta de sol">
+        </article>
+    </section>
+    <hr>
+    <section class="transform">
+        <h2>Transformaciones</h2>
+
+        <h3>Tranformaciones en 2D</h3>
+        <article class="card tranform-2d">
+            <img src="assets/aves.png" alt="puesta de sol">
+        </article>
+
+        <h3>Tranformaciones en 3D</h3>
+        <article class="card tranform-3d">
+            <img src="assets/puesta-sol.jpg" alt="puesta de sol">
+        </article>
+
+        <h3>Origen de las Tranformaciones</h3>
+        <article class="card tranform-origin">
+            <img src="assets/BuenosDias.jpg" alt="puesta de sol">
+        </article>
+
+        <h3>Flip Cards</h3>
+        <article class="flip-card">
+            <div class="flip-face flip-front">
+                <img src="assets/puesta-sol.jpg" alt="puesta de sol">
+            </div>
+            <div class="flip-face flip-back">
+                <img src="assets/BuenosDias.jpg" alt="puesta de sol">
+            </div>
+        </article>
+    </section>
+    <hr>
+    <section class="animation">
+        <h2>Animaciones</h2>
+        <h3>Animacion de 2 Frame {from && to}</h3>
+        <article class="card my-animation">
+            <img src="assets/607877.jpg" alt="Levi">
+        </article>
+        <h3>Animacion de multiples Frame {0% && --- && 100%}</h3>
+        <article class="card my-animation-2">
+            <img src="assets/1042906.jpg" alt="Levi">
+        </article>
+    </section>
+    <hr>
+
+    <section class="motion-examples">
+        <h2>Ejemplos de efectos de Movimiento en CSS</h2>
+        <h3>FadeIn / FadeOut</h3>
+        <div class="fade-in">🙈</div>
+        <div class="fade-out">🙉</div>
+        <h3>Sacudir</h3>
+        <div class="shake">🍵</div>
+        <h3>Pulsaciones</h3>
+        <div class="pulse">❤️</div>
+        <div class="pulse">🐱Chimuelo🐱</div>
+        <div class="pulse">Eres el CSS de mi HTML</div>
+        <div class="heart"></div>
+        <h3>Spinner / Loader</h3>
+        <div class="spinner"></div>
+        <h3>Botones animados</h3>
+        <button class="btn anim-bottom to-left">Animación Izquierda</button>
+        <button class="btn anim-bottom to-center">Animación Centro</button>
+        <button class="btn anim-bottom to-right">Animación Derecha</button>
+        <button class="btn anim-bg-gradient">Fondo con gradiente</button>
+        <h3>Menu de pestañas (Tabs)</h3>
+        <nav class="tabs-menu" style="margin: auto;">
+            <input type="radio" id="tab-1" name="tabs">
+            <label for="tab-1">Sección 1</label>
+            <input type="radio" id="tab-2" name="tabs">
+            <label for="tab-2">Sección 2</label>
+            <input type="radio" id="tab-3" name="tabs">
+            <label for="tab-3">Sección 3</label>
+            <input type="radio" id="tab-4" name="tabs">
+            <label for="tab-4">Sección 4</label>
+            <div class="tab-bg-hover"></div>
+        </nav>
+    </section>
+
+    <!--  <h3>Menu Off Canvas</h3> -->
+    <section class="Menu-Off-Canvas">
+        <input type="checkbox" class="off-canvas-btn">
+        <label class="off-canvas-burger"></label>
+        <nav class="off-canvas-menu">
+            <div class="off-canvas-menu-container">
+                <a href="" class="off-canvas-link">Sección 1</a>
+                <a href="" class="off-canvas-link">Sección 2</a>
+                <a href="" class="off-canvas-link">Sección 3</a>
+                <a href="" class="off-canvas-link">Sección 4</a>
+                <a href="" class="off-canvas-link">Sección 5</a>
+            </div>
+        </nav>
+    </section>
+    <h3>Ventana Modal</h3>
+    <a href="#modal-1">Abrir Modal</a>
+    <article class="modal" id="modal-1">
+        <div class="modal-container">
+            <a href="#close" class="Modal-close">X</a>
+            <h2>Esto es una ventana modal</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sunt quaerat maxime architecto,
+                distinctio ea quia? Temporibus, est, ut tempore assumenda nam iste perferendis fugiat eius cum quos
+                doloribus nihil?
+            </p>
+            <ul>
+                <li><a href="">Enlace</a></li>
+                <li><a href="">Enlace</a></li>
+                <li><a href="">Enlace</a></li>
+                <li><a href="">Enlace</a></li>
+                <li><a href="">Enlace</a></li>
+                <li><a href="">Enlace</a></li>
+            </ul>
+        </div>
+    </article>
+    <br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

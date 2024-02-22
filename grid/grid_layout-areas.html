@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Areas</title>
+    <style>
+    html {
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-family: sans-serif;
+    }
+
+    *,
+    *::after,
+    *::before {
+        margin: 0;
+        box-sizing: inherit;
+    }
+    body{
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: 
+            "header header header header header header"
+            "nav nav nav nav nav nav"
+            "uc-left uc-left uc-center uc-center uc-right uc-right"
+            "middel middel middel lower lower lower"
+            "footer footer footer footer footer footer";
+    }
+
+    body > *{
+          border: medium solid #222; 
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    .header {
+        background: #b71414;
+        grid-area: header;
+    }
+
+    .nav{
+        background: #d95757;
+        grid-area: nav;
+    }
+
+    .uc-left{
+        background: #0ff;
+        grid-area: uc-left;
+    }    
+
+    .uc-center{
+        background: rgb(172, 104, 250);
+        grid-area: uc-center;
+    }
+
+    .uc-right{
+        background: #0ff;
+        grid-area: uc-right;
+    }
+
+    .middel{
+        background: rgb(91, 164, 147);
+        grid-area: middel;
+    }
+
+    .lower{
+        background:rgb(235, 160, 55);
+        grid-area: lower;
+    }
+    
+    .footer {
+        background: #5b0404;
+        grid-area: footer;
+    }
+
+    @media screen and (min-width: 1024px){
+        body {
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-areas: 
+            "header header header header header"
+            "nav uc-left uc-center uc-center uc-right"
+            "nav middel middel middel middel"
+            "nav lower lower lower lower"
+            "footer footer footer footer footer";
+        }
+    }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h2>Header</h2>
+    </header>
+    <nav class="nav">
+        <h2>Nav</h2>
+    </nav>
+    <aricle class="uc-left">
+        <h2>Upper Content Left</h2>
+    </aricle>
+    <aricle class="uc-center">
+        <h2>Upper Content Center</h2>
+    </aricle>
+    <aricle class="uc-right">
+        <h2>Upper Content Right</h2>
+    </aricle>
+    <article class="middel">
+        <h2>Middel Content</h2>
+    </article>
+    <article class="lower">
+        <h2>Lower Content</h2>
+    </article>
+    <footer class="footer">
+        <h2>Footer</h2>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+    html {
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-family: sans-serif;
+    }
+
+    *,
+    *::after,
+    *::before {
+        margin: 0;
+        box-sizing: inherit;
+    }
+    body{
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    body > *{
+          border: medium solid #222; 
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    .header {
+        background: #b71414;
+        grid-column: span 6;
+        grid-row: span 1;
+    }
+
+    .nav{
+        background: #d95757;
+        grid-column: span 6;
+        grid-row: span 1;
+    }
+
+    .uc-left{
+        background: #0ff;
+        grid-column: 1/3;
+        grid-row: span 1;
+    }    
+
+    .uc-center{
+        background: rgb(172, 104, 250);
+        grid-area: 3/3/4/5; /* fila/columna/fila/columna */
+    }
+
+    .uc-right{
+        background: #0ff;
+        grid-row: span 1;
+        grid-column: span 2;
+    }
+
+    .middel{
+        background: rgb(91, 164, 147);
+        grid-row: span 1;
+        grid-column: span 3;
+    }
+
+    .lower{
+        background:rgb(235, 160, 55);
+        grid-row: span 1;
+        grid-column: span 3;
+    }
+    
+    .footer {
+        background: #5b0404;
+        grid-column: span 6;
+        grid-row: span 1;
+    }
+
+    @media screen and (min-width: 1024px){
+        body {
+            grid-template-columns: repeat(5, 1fr);
+        }
+        .header {
+        grid-column: span 5;
+        }
+
+        .nav{
+            grid-column: span 1;
+            grid-row: 2/5;
+        }
+
+        .uc-left{
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }    
+
+        .uc-center{
+            grid-area: 2/3/3/5; /* fila/columna/fila/columna */
+        }
+
+        .middel{
+            grid-row: 3/4;
+            grid-column: 2/span 4;
+        }
+
+        .lower{
+            grid-row: 4/5;
+            grid-column: 2/span 4;
+        }
+        
+        .footer {
+            background: #5b0404;
+            grid-column: span 6;
+            grid-row: span 1;
+        }
+
+    }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h2>Header</h2>
+    </header>
+    <nav class="nav">
+        <h2>Nav</h2>
+    </nav>
+    <aricle class="uc-left">
+        <h2>Upper Content Left</h2>
+    </aricle>
+    <aricle class="uc-center">
+        <h2>Upper Content Center</h2>
+    </aricle>
+    <aricle class="uc-right">
+        <h2>Upper Content Right</h2>
+    </aricle>
+    <article class="middel">
+        <h2>Middel Content</h2>
+    </article>
+    <article class="lower">
+        <h2>Lower Content</h2>
+    </article>
+    <footer class="footer">
+        <h2>Footer</h2>
+    </footer>
+</body>
+</html>
